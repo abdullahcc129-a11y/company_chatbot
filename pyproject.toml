@@ -1,0 +1,25 @@
+[project]
+name = "automated-company-research"
+version = "0.1.0"
+description = "Automated Company Research System using FastAPI, CrewAI, and OpenAI."
+authors = [
+    { name = "Your Name", email = "your.email@example.com" }
+]
+readme = "README_AUTOMATED.md"
+requires-python = ">=3.10,<3.14"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.14"
+fastapi = "0.104.1"
+uvicorn = {version = "0.24.0", extras = ["standard"]}
+httpx = "0.25.2"
+pydantic = "2.5.0"
+python-dotenv = "1.0.0"
+aiohttp = "3.9.1"
+openai = "1.3.7"
+crewai = "0.148.0"
+recallrai = "0.2.0"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta" 
