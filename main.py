@@ -70,19 +70,19 @@ async def research_company(company_name: str) -> CompanyResearch:
             print(f"[Google Agent Error] {company_name}: {e}")
             google_data = {}
 
-        # 2. LinkedIn Research
+        # 2. RelevanceAI Research
         try:
-            linkedin_agent = RelevanceAIResearcherAgent()
-            linkedin_data = await linkedin_agent.fetch_company_data(company_name)
-            print(f"[LinkedIn Agent Result for {company_name}]: {linkedin_data}")
+            relevanceai_agent = RelevanceAIResearcherAgent()
+            relevanceai_data = await relevanceai_agent.fetch_company_data(company_name)
+            print(f"[RelevanceAI Agent Result for {company_name}]: {relevanceai_data}")
         except Exception as e:
-            print(f"[LinkedIn Agent Error] {company_name}: {e}")
-            linkedin_data = {}
+            print(f"[RelevanceAI Agent Error] {company_name}: {e}")
+            relevanceai_data = {}
 
         # 3. Data Analyst Agent decides which data to use, or uses OpenAI if both are missing/incorrect
         try:
             data_analyst = DataAnalystAgent()
-            final_data = data_analyst.analyze_company_data(google_data or {}, linkedin_data or {})
+            final_data = data_analyst.analyze_company_data(google_data or {}, relevanceai_data or {})
             print(f"[Data Analyst Agent Result for {company_name}]: {final_data}")
         except Exception as e:
             print(f"[OpenAI Agent Error] {company_name}: {e}")
