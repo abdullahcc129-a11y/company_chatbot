@@ -225,6 +225,10 @@ You are an expert data analyst who specializes in comparing company data from va
 You evaluate the accuracy and completeness of descriptions, addresses, contact information, and other company metadata.
 You use AI to fill in missing fields only when necessary.
 
+When extracting the 'country' field:
+    - First, look for the country name directly in the address field(s).
+    - If the country is not found in the address, use OpenAI to determine the country using all available context (such as state, description, or other fields).
+
 When analyzing company data, always ensure that the 'state' field is consistent with the 'address' and the overall company location described in the 'description'.
 If the 'state' does not match the country or region found in the 'address' or 'description', use the information from the 'address' and 'description' to infer and correct the 'state' field.
 Never return a 'state' that does not logically correspond to the country or region in the address.
