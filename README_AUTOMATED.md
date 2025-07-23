@@ -108,8 +108,7 @@ print(response.json())
 
 Set your API keys in a `.env` file:
 ```
-LINKEDIN_CLIENT_ID=your_linkedin_client_id
-LINKEDIN_CLIENT_SECRET=your_linkedin_client_secret
+
 GOOGLE_API_KEY=your_google_api_key
 GOOGLE_CSE_ID=your_google_cse_id
 OPENAI_API_KEY=your_openai_api_key
@@ -122,7 +121,6 @@ OPENAI_API_KEY=your_openai_api_key
 - ✅ **Fully Automatic**: Just send a company name, get enriched data back
 - ✅ **Multi-source Research**: Google + LinkedIn + AI analysis
 - ✅ **Single Endpoint**: Simple integration for any server or script
-- ✅ **No CRM Required**: No CRM integration or configuration needed
 - ✅ **Detailed Data**: Returns all available company info
 
 ---
